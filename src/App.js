@@ -1,25 +1,27 @@
-import StaffList from "./components/StaffList";
+import { Route, Routes } from "react-router-dom";
 import "./index.css";
 // import StaffInfor from "./components/StaffInfor";
-import { STAFFS } from "./shared/staffs";
 // import { useState } from "react";
+import HeaderBottom from "./components/HeaderBottom";
 import Header from "./components/Header";
-const staffList = STAFFS;
-console.log(staffList);
+import StaffPage from "./pages/StaffPage";
+import DepartmentPage from "./pages/DepartmentPage";
+import SalaryPage from "./pages/SalaryPage";
 
 function App() {
-  // const [staffs, setStaff] = useState(null);
-  const chooseStaff = (staff) => {
-    console.log(staff);
-    // setStaff(staff);
-  };
   return (
     <>
-      <h1>Ứng dụng quản lý nhân sự v1.0</h1>
-      <StaffList staffList={staffList} chooseStaff={chooseStaff} />
+      <Header />
+      <br />
+      <br />
+      <Routes>
+        <Route path="/" element={<StaffPage />} />
+        <Route path="/department" element={<DepartmentPage />} />
+        <Route path="/salary" element={<SalaryPage />} />
+      </Routes>
       {/* <StaffInfor staffs={staffs} /> */}
       <br></br>
-      <Header />
+      <HeaderBottom />
     </>
   );
 }

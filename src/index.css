@@ -17,13 +17,27 @@ code {
   margin: auto;
 }
 
-h1 {
+.header-home {
   padding-left: 30px;
-  padding-top: 10px;
-  padding: auto;
-  font-size: 25px;
+  font-size: 20px;
   height: 50px;
-  background-color: blue;
+  background-color: rgb(47, 47, 226);
+  color: rgb(195, 250, 16);
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  height: 100%;
+}
+
+li {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.link {
+  text-decoration: none;
   color: white;
 }
 
