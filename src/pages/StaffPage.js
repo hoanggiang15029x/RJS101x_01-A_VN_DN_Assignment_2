@@ -1,22 +1,16 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../index.css";
 import StaffList from "../components/StaffList";
-import { STAFFS } from "../shared/staffs";
 
-// import StaffInfor from "./components/StaffInfor";
-// import { useState } from "react";
-
-export default function StaffPage() {
-  // const [staffs, setStaff] = useState(null);
-  const staffList = STAFFS;
-  console.log(staffList);
-  const chooseStaff = (staff) => {
-    console.log(staff);
-    // setStaff(staff);
-  };
+export default function StaffPage({ staffList, chooseStaff }) {
   return (
     <>
+      <Link className="link-staff" to="/">
+        <h2>Nhân Viên</h2>
+      </Link>
+      <hr />
+      <br />
       <StaffList staffList={staffList} chooseStaff={chooseStaff} />
     </>
   );

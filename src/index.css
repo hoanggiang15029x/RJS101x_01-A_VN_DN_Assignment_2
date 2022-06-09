@@ -41,6 +41,12 @@ li {
   color: white;
 }
 
+.link-staff {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+}
+
 .staff {
   border: solid 2px rgb(212, 212, 212);
 }
@@ -67,6 +73,7 @@ button {
 }
 
 .staffInfor {
+  display: flex;
   margin-left: 0.6%;
   /* padding: 20px; */
   width: 50%;
