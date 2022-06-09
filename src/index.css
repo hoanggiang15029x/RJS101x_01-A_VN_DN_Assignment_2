@@ -58,8 +58,9 @@ li {
   text-align: center;
   border-radius: 10px;
   margin-right: 0.5%;
-  margin-left: 2%;
+  margin-left: 1%;
   margin-bottom: 20px;
+  background-color: white;
 }
 
 .button-deparment {
@@ -149,6 +150,10 @@ li {
   .img-staffInfor {
     width: 34%;
   }
+
+  .button-salary {
+    width: 45.5%;
+  }
 }
 
 /* For mobile*/
@@ -167,5 +172,14 @@ li {
   }
   h1 {
     font-size: 22px;
+  }
+
+  .button-salary {
+    width: 95%;
+  }
+
+  .header-home {
+    padding-left: 0px;
+    font-size: 14px;
   }
 }

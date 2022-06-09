@@ -10,7 +10,7 @@ export default function Deparment({ deparment, chooseDeparment }) {
       onClick={() => chooseDeparment(deparment)}
     >
       <Link className="link-staff" to={link}>
-        <h2>{deparment.name}</h2>
+        <h3>{deparment.name}</h3>
         <p style={{ marginLeft: 15 + "px" }}>
           Số lương nhân viên: {deparment.numberOfStaff}
         </p>
