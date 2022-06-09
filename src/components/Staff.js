@@ -5,7 +5,7 @@ import "../index.css";
 export default function Staff({ staff, chooseStaff }) {
   let link = `/staff-information/${staff.id}`;
   return (
-    <button className="staff" onClick={() => chooseStaff(staff)}>
+    <button className="staff button-staff" onClick={() => chooseStaff(staff)}>
       <Link className="link-staff" to={link}>
         <img
           src={staff.image}

@@ -5,13 +5,14 @@ import dateFormat from "dateformat";
 
 export default function SalaryPage(props) {
   const { name } = props.staffs.department;
+
   return (
     <div>
-      <h4>
+      <h3>
         <Link to="/">Nhân Viên</Link> / {props.staffs.name}
-      </h4>
+      </h3>
       <div className="staffInfor">
-        <img src={props.staffs.image} width="200px" />
+        <img src={props.staffs.image} className="img-staffInfor" />
         <div className="information">
           <p className="name">
             <b>Họ và tên: {props.staffs.name}</b>
@@ -21,8 +22,8 @@ export default function SalaryPage(props) {
             Ngày vào công ty: {dateFormat(props.staffs.startDate, "dd/mm/yyyy")}
           </p>
           <p>Phòng ban: {name}</p>
-          <p>Số ngày nghỉ còn lại: {props.staffs.overTime}</p>
-          <p>Số ngày đã làm thêm: {props.staffs.annualLeave}</p>
+          <p>Số ngày nghỉ còn lại: {props.staffs.annualLeave}</p>
+          <p>Số ngày đã làm thêm: {props.staffs.overTime}</p>
         </div>
       </div>
     </div>
