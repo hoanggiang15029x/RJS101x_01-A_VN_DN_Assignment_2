@@ -23,9 +23,11 @@ export default function StaffPage({
             placeholder="Nhập tên cần tìm...."
             onChange={onTextInputChange}
           />
-          <button className="button-find" onClick={findStaff}>
-            Tìm
-          </button>
+          <Link to="/find-staff">
+            <button className="button-find" onClick={findStaff}>
+              Tìm
+            </button>
+          </Link>
         </div>
       </div>
       <hr />

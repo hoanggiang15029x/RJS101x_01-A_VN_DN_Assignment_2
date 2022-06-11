@@ -21,8 +21,8 @@ function App() {
   const [linkDeparmentInfor, setLinkDeparmentInfor] = useState("");
   const [linkStaffOfDeparment, setLinkStaffOfDeparment] = useState("");
 
-  const [findStaffList, setFindStaffList] = useState([]);
   const [textInput, setTextInput] = useState("");
+  const [findStaffList, setFindStaffList] = useState(STAFFS);
 
   const chooseStaff = (staff) => {
     console.log(staff);
@@ -45,18 +45,17 @@ function App() {
     setTextInput(e.target.value);
   };
 
-  const findStaff = (e) => {
-    console.log("hello");
-    let dem = 0;
+  const findStaff = () => {
+    let listFindStaff = [];
     for (let staff of STAFFS) {
       if (staff.name === textInput) {
-        setFindStaffList([staff]);
-        dem++;
-        console.log(findStaffList);
+        listFindStaff.push(staff);
       }
     }
-    console.log("dem =", dem);
-    setStaffList(findStaffList);
+    console.log(listFindStaff);
+
+    if (textInput == "") setFindStaffList(STAFFS);
+    else setFindStaffList(listFindStaff);
   };
 
   return (
@@ -68,6 +67,17 @@ function App() {
           element={
             <StaffPage
               staffList={staffList}
+              chooseStaff={chooseStaff}
+              onTextInputChange={onTextInputChange}
+              findStaff={findStaff}
+            />
+          }
+        />
+        <Route
+          path="/find-staff"
+          element={
+            <StaffPage
+              staffList={findStaffList}
               chooseStaff={chooseStaff}
               onTextInputChange={onTextInputChange}
               findStaff={findStaff}
