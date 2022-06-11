@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../index.css";
 import StaffList from "../components/StaffList";
 
-export default function StaffPage({ staffList, chooseStaff }) {
+export default function StaffPage({
+  staffList,
+  chooseStaff,
+  onTextInputChange,
+  findStaff,
+}) {
   return (
     <>
       <div className="header_body">
@@ -12,7 +17,16 @@ export default function StaffPage({ staffList, chooseStaff }) {
             <b>Nhân Viên</b>
           </p>
         </Link>
-        <input style={{ width: "300px" }} />
+        <div>
+          <input
+            style={{ width: "300px", height: "20px" }}
+            placeholder="Nhập tên cần tìm...."
+            onChange={onTextInputChange}
+          />
+          <button className="button-find" onClick={findStaff}>
+            Tìm
+          </button>
+        </div>
       </div>
       <hr />
       <br />

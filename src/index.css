@@ -143,6 +143,14 @@ li {
   margin-right: 30px;
 }
 
+.button-find {
+  margin-left: 10px;
+  width: 60px;
+  height: 27px;
+  background-color: rgb(148, 148, 148);
+  border-radius: 5px;
+}
+
 /* For tablet: */
 @media only screen and (max-width: 992px) and (min-width: 768px) {
   .button-staff,

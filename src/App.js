@@ -11,13 +11,18 @@ import DeparmentInforPage from "./pages/DeparmentInforPage";
 import { STAFFS, DEPARTMENTS } from "./shared/staffs";
 
 function App() {
-  const staffList = STAFFS;
-  console.log(staffList);
   const deparmentList = DEPARTMENTS;
-  console.log(deparmentList);
 
+  const [staffList, setStaffList] = useState(STAFFS);
   const [staffs, setStaff] = useState(null);
   const [linkInfor, setLinkInfor] = useState("");
+
+  const [deparment, setDeparment] = useState(null);
+  const [linkDeparmentInfor, setLinkDeparmentInfor] = useState("");
+  const [linkStaffOfDeparment, setLinkStaffOfDeparment] = useState("");
+
+  const [findStaffList, setFindStaffList] = useState([]);
+  const [textInput, setTextInput] = useState("");
 
   const chooseStaff = (staff) => {
     console.log(staff);
@@ -29,15 +34,29 @@ function App() {
     setLinkStaffOfDeparment(link2);
   };
 
-  const [deparment, setDeparment] = useState(null);
-  const [linkDeparmentInfor, setLinkDeparmentInfor] = useState("");
-  const [linkStaffOfDeparment, setLinkStaffOfDeparment] = useState("");
-
   const chooseDeparment = (deparment) => {
     const link = `/deparment-information/${deparment.id}`;
     <Link to={link} />;
     setDeparment(deparment);
     setLinkDeparmentInfor(link);
+  };
+
+  const onTextInputChange = (e) => {
+    setTextInput(e.target.value);
+  };
+
+  const findStaff = (e) => {
+    console.log("hello");
+    let dem = 0;
+    for (let staff of STAFFS) {
+      if (staff.name === textInput) {
+        setFindStaffList([staff]);
+        dem++;
+        console.log(findStaffList);
+      }
+    }
+    console.log("dem =", dem);
+    setStaffList(findStaffList);
   };
 
   return (
@@ -47,7 +66,12 @@ function App() {
         <Route
           path="/"
           element={
-            <StaffPage staffList={staffList} chooseStaff={chooseStaff} />
+            <StaffPage
+              staffList={staffList}
+              chooseStaff={chooseStaff}
+              onTextInputChange={onTextInputChange}
+              findStaff={findStaff}
+            />
           }
         />
         <Route
