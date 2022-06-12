@@ -2,12 +2,15 @@ import { Route, Routes, Link } from "react-router-dom";
 import React from "react";
 import "../index.css";
 
-export default function Header({ staff }) {
+export default function Header() {
   return (
     <>
       <div className="header-home">
         <nav>
           <ul>
+            <li>
+              <img src="/assets/images/funix.png" width="50px" />
+            </li>
             <li>
               <Link className="link" to="/">
                 <i className="bi bi-file-person-fill" /> Nhân Viên

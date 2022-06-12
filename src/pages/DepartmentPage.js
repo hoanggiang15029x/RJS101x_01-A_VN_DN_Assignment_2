@@ -6,9 +6,14 @@ import DeparmentList from "../components/DeparmentList";
 export default function DepartmentPage({ deparmentList, chooseDeparment }) {
   return (
     <>
-      <Link className="link-staff" to="/department">
-        <h2>Phòng Ban</h2>
-      </Link>
+      <br />
+      <div className="header_body">
+        <Link className="link-staff" to="/department">
+          <h2 style={{ margin: "0" }}>Phòng Ban</h2>
+        </Link>
+        <div style={{ marginTop: "15px" }}></div>
+      </div>
+      <br />
       <hr />
       <br />
       <DeparmentList
