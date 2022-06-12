@@ -42,18 +42,23 @@ function App() {
   };
 
   const onTextInputChange = (e) => {
-    setTextInput(e.target.value);
+    setTextInput(e.target.value.trim());
   };
 
   const findStaff = () => {
     let listFindStaff = [];
     for (let staff of STAFFS) {
-      if (staff.name === textInput) {
-        listFindStaff.push(staff);
+      for (let i = 0; i <= staff.name.length - textInput.length; i++) {
+        let char = "";
+        for (let j = i; j < textInput.length + i; j++) {
+          char += staff.name[j];
+        }
+        if (char.toUpperCase() === textInput.toUpperCase()) {
+          listFindStaff.push(staff);
+          break;
+        }
       }
     }
-    console.log(listFindStaff);
-
     if (textInput == "") setFindStaffList(STAFFS);
     else setFindStaffList(listFindStaff);
   };

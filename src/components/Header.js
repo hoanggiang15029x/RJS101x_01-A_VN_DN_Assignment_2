@@ -10,7 +10,7 @@ export default function Header({ staff }) {
           <ul>
             <li>
               <Link className="link" to="/">
-                Nhân Viên
+                <i className="bi-class-name"> Nhân Viên</i>
               </Link>
             </li>
             <li>

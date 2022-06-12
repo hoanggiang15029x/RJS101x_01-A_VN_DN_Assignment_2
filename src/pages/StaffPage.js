@@ -11,13 +11,14 @@ export default function StaffPage({
 }) {
   return (
     <>
+      <br />
       <div className="header_body">
         <Link className="link-staff" to="/">
-          <p style={{ margin: "0" }}>
+          <h2 style={{ margin: "0" }}>
             <b>Nhân Viên</b>
-          </p>
+          </h2>
         </Link>
-        <div>
+        <div style={{ marginTop: "15px" }}>
           <input
             style={{ width: "300px", height: "20px" }}
             placeholder="Nhập tên cần tìm...."
@@ -30,6 +31,7 @@ export default function StaffPage({
           </Link>
         </div>
       </div>
+      <br />
       <hr />
       <br />
       <StaffList staffList={staffList} chooseStaff={chooseStaff} />
