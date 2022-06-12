@@ -8,11 +8,40 @@ export default function HeaderBottom() {
         <div className="header-left">
           <h3>Our Address</h3>
           <p>121, Clear Water Bay Road Clear Water Bay, Kowloon HONG KONG </p>
-          <p>Phone :+852 1234 5678 - +852 8765 4321</p>
-          <p>Mail: confusion@food.net</p>
+          <p>
+            <i className="bi bi-telephone-fill" />: +852 1234 5678 - +852 8765
+            4321
+          </p>
+          <p>
+            <i className="bi bi-envelope-fill" />: confusion@food.net
+          </p>
         </div>
         <div className="header-right">
-          <h2>Hello</h2>
+          <img
+            src="/assets/images/gg.png"
+            width="40px"
+            style={{ borderRadius: "5px" }}
+          />
+          <img
+            src="/assets/images/fb.png"
+            width="40px"
+            style={{ borderRadius: "5px" }}
+          />
+          <img
+            src="/assets/images/in.png"
+            width="40px"
+            style={{ borderRadius: "5px" }}
+          />
+          <img
+            src="/assets/images/tw.png"
+            width="40px"
+            style={{ borderRadius: "5px" }}
+          />
+          <img
+            src="/assets/images/ytb.png"
+            width="40px"
+            style={{ borderRadius: "5px" }}
+          />
         </div>
       </div>
       <div className="header-bottom">
