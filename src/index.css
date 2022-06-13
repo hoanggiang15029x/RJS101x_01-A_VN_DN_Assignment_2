@@ -169,7 +169,8 @@ li {
     width: 34%;
   }
 
-  .button-salary {
+  .button-salary,
+  .button-deparment {
     width: 45.5%;
   }
 }
@@ -192,7 +193,8 @@ li {
     font-size: 22px;
   }
 
-  .button-salary {
+  .button-salary,
+  .button-deparment {
     width: 95%;
   }
 
