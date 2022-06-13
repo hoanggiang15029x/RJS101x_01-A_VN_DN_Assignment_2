@@ -12,7 +12,7 @@ export default function SalaryPage(props) {
         <Link to="/">Nhân Viên</Link> / {props.staffs.name}
       </h3>
       <div className="staffInfor">
-        <img src={props.staffs.image} className="img-staffInfor" />
+        <img src={props.staffs.image} className="img-staffInfor" alt="" />
         <div className="information">
           <p className="name">
             <b>Họ và tên: {props.staffs.name}</b>

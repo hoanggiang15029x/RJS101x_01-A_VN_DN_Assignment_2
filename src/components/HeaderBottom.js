@@ -21,26 +21,31 @@ export default function HeaderBottom() {
             src="/assets/images/gg.png"
             width="40px"
             style={{ borderRadius: "5px" }}
+            alt=""
           />
           <img
             src="/assets/images/fb.png"
             width="40px"
             style={{ borderRadius: "5px" }}
+            alt=""
           />
           <img
             src="/assets/images/in.png"
             width="40px"
             style={{ borderRadius: "5px" }}
+            alt=""
           />
           <img
             src="/assets/images/tw.png"
             width="40px"
             style={{ borderRadius: "5px" }}
+            alt=""
           />
           <img
             src="/assets/images/ytb.png"
             width="40px"
             style={{ borderRadius: "5px" }}
+            alt=""
           />
         </div>
       </div>

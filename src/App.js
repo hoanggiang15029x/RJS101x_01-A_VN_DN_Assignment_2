@@ -1,5 +1,5 @@
 import { Route, Routes, Link } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./index.css";
 import HeaderBottom from "./components/HeaderBottom";
 import Header from "./components/Header";
@@ -12,8 +12,8 @@ import { STAFFS, DEPARTMENTS } from "./shared/staffs";
 
 function App() {
   const deparmentList = DEPARTMENTS;
+  const staffList = STAFFS;
 
-  const [staffList, setStaffList] = useState(STAFFS);
   const [staffs, setStaff] = useState(null);
   const [linkInfor, setLinkInfor] = useState("");
 
@@ -98,7 +98,7 @@ function App() {
             />
           }
         />
-        <Route path="/salary" element={<SalaryPage staffList={staffList} />} />
+        <Route path="/salary" element={<SalaryPage />} />
         <Route path={linkInfor} element={<StaffInforPage staffs={staffs} />} />
         <Route
           path={linkDeparmentInfor}
